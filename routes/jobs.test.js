@@ -29,16 +29,16 @@ describe("POST /jobs", function () {
           companyHandle: "c1",
           title: "J-new",
           salary: 10,
-          equity: "0.2",
+          equity: 0.5,
         })
         .set("authorization", `Bearer ${adminToken}`);
-    // expect(resp.statusCode).toEqual(201);
+    expect(resp.statusCode).toEqual(201);
     expect(resp.body).toEqual({
       job: {
         id: expect.any(Number),
         title: "J-new",
         salary: 10,
-        equity: "0.2",
+        equity: "0.5",
         companyHandle: "c1",
       },
     });

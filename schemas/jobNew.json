@@ -6,7 +6,7 @@
   "title": "Root Schema",
   "required": [
       "title",
-      "company_handle"
+      "companyHandle"
   ],
   "properties": {
       "title": {
@@ -19,10 +19,10 @@
           "minimum": 0
       },
       "equity": {
-          "type": "integer",
+          "type": "number",
           "pattern": "0|(0?\\.[0-9]+)"
       },
-      "company_handle": {
+      "companyHandle": {
           "type": "string",
           "minLength": 1,
           "maxLength": 30
